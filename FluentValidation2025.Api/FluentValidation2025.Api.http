@@ -1,6 +1,6 @@
-@FluentValidation2025.Api_HostAddress = http://localhost:5171
+@base_address = http://localhost:5171
 
-GET {{FluentValidation2025.Api_HostAddress}}/weatherforecast/
+GET {{base_address}}/weatherforecast/
 Accept: application/json
 
 ###
