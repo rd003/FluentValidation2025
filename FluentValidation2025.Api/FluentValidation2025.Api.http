@@ -5,9 +5,10 @@ Content-Type: application/json
 
 {
     "id":null,
-    "Name": null,
-    "email": "abc.com",
-    "age": null
+    "Name": "blah",
+    "email": "abc@x.com",
+    "age": null,
+    "password":"abc1"
 }
 
 ###

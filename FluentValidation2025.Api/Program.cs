@@ -1,3 +1,7 @@
+using FluentValidation;
+using FluentValidation2025.Api.Models;
+using FluentValidation2025.Api.Validators;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// builder.Services.AddScoped<IValidator<Person>, PersonValidator>();
+// builder.Services.AddScoped<IValidator<Category>, CategoryValidator>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<PersonValidator>();
+// builder.Services.AddValidatorsFromAssemblyContaining<PersonValidator>(ServiceLifetime.Transient);
 
 var app = builder.Build();
 
