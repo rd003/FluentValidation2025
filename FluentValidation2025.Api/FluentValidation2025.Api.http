@@ -1,6 +1,13 @@
 @base_address = http://localhost:5171
 
-GET {{base_address}}/weatherforecast/
-Accept: application/json
+POST {{base_address}}/api/people
+Content-Type: application/json
+
+{
+    "id":null,
+    "Name": null,
+    "email": "abc.com",
+    "age": null
+}
 
 ###
